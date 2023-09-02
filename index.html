@@ -16,6 +16,17 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/experience.css" rel="stylesheet">
     <!-- <link href="css/experience2.css" rel="stylesheet"> -->
+    <!-- EMail JS -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("OQ8EGEUh_C-bT7TQO");
+      })();
+    </script>
+
+    <script src="js/email.js"></script>
 </head>
 <body>
   <div class="icon-bar">
@@ -350,26 +361,32 @@
   <section id="contact" class="mt-5 pt-3">
     <div class= content-body">
       <h1>Let's Connect</h1>
+      <p id="email-response" class="container mt-3 d-flex justify-content-center align-items-center"></p>
       <div class="container mt-3 d-flex justify-content-center align-items-center">
-        <form action="">
+        <form action="" id="myForm">
           <div class="mb-3 mt-3">
-            <label for="name">Your Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" required>
+            <label for="from_name">Your Name:</label>
+            <input type="text" class="form-control" id="from_name" placeholder="Your Name" name="name" required>
           </div>
           <div class="mb-3 mt-3">
-            <label for="email">Your Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required>
+            <label for="from_email">Your Email:</label>
+            <input type="email" class="form-control" id="from_email" placeholder="Your Email" name="email" required>
           </div>
           <div class="mb-3">
-            <label for="pwd">Subject:</label>
-            <input type="text" class="form-control" id="pwd" placeholder="Subject" name="pswd" required>
+            <label for="from_subject">Subject:</label>
+            <input type="text" class="form-control" id="from_subject" placeholder="Subject" name="pswd" required>
           </div>
           <div class="form-group mb-3">
-            <label for="comment">Message:</label>
-            <textarea class="form-control" rows="5" id="comment" placeholder="Your Message" required></textarea>
+            <label for="from_msg">Message:</label>
+            <textarea class="form-control" rows="5" id="from_msg" placeholder="Your Message" required></textarea>
           </div>
-          <button type="submit" class="btn" style="background-color: var(--blue); color:white;">Submit</button>
+          <button type="submit" class="btn" style="background-color: var(--blue); color:white;" id="submitButton">Submit</button>
         </form>
+        <div id="loadingIndicator" style="display: none;">
+          <!-- Loading indicator, e.g., a spinner -->
+          Loading...
+      </div>
+  
       </div>
     </div>
   </section>
@@ -385,5 +402,27 @@
       <!-- Typewrite effect script -->
       <script src="js/typewrite.js"></script>
       <script src="js/main.js"></script>
+      <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const submitButton = document.getElementById('submitButton');
+          const loadingIndicator = document.getElementById('loadingIndicator');
+          
+          submitButton.disabled = true;
+          loadingIndicator.style.display = 'block';
+          
+          var email_resp=SendMail();
+          
+          submitButton.disabled = false;
+          loadingIndicator.style.display = 'none';
+          if (email_resp){
+            document.getElementById('email-response').innerHTML='Thank you for your message.'
+          }
+          else{
+            document.getElementById('email-response').innerHTML='Sorry!, Due to some technical problem, It is not possible to copy your message.'
+          }
+        });
+    </script>
+
 </body>
 </html>

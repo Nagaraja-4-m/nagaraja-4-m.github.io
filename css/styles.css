@@ -106,3 +106,9 @@
   .download-resume:hover{
     background-color: var(--blue_transparent);
   }
+
+  #email-response{
+    font-weight:bolder;
+    color:var(--blue);
+
+  }
