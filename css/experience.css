@@ -209,6 +209,9 @@
     padding-top: 8px;
     text-align: justify;
 }
+.main-timeline .description i{
+    color: black;
+}
 
 .main-timeline .timeline:nth-child(2n) .date-content {
     float: right
