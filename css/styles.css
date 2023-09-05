@@ -112,3 +112,22 @@
     color:var(--blue);
 
   }
+/* 
+  .navbar-collapse
+  {
+    width: 45px;
+  } */
+
+  .navbar-toggler{
+    border: 1.5px solid var(--dark_blue);
+    background-color: var(--blue);
+  }
+
+  .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 var(--white, white);
+}
+*, ::after, ::before{
+  
+}

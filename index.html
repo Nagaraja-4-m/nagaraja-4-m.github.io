@@ -26,7 +26,7 @@
       })();
     </script>
 
-    <script src="js/email.js"></script>
+    <!-- <script src="js/email.js"></script> -->
 </head>
 <body>
   <div class="icon-bar">
@@ -38,53 +38,35 @@
   </div>
 
     <header>
-      <nav class="navbar navbar-expand-sm">
+      <nav class="navbar navbar-dark nav-menu navbar-expand-md fixed-top">
+        <!-- <a href="">Logo</a> -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
         </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav nav justify-content-center fixed-top nav-menu">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
+        <div class="navbar-collapse collapse justify-content-center"  id="menu">
+        
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#lang-tools">Languages & Tools</a>
+              <a class="nav-link" href="#lang-tools">Languages & Tools</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#certificates">Certificates</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            </ul>
-          </div>
+              <a class="nav-link" href="#certificates">Certificates</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
         </div>
       </nav>
-        <!-- <ul class="nav justify-content-center fixed-top nav-menu">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#lang-tools">Languages & Tools</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#certificates">Certificates</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul> -->
-      <!-- </div> -->
   </header>
 
   <section class="container">
@@ -380,13 +362,8 @@
             <label for="from_msg">Message:</label>
             <textarea class="form-control" rows="5" id="from_msg" placeholder="Your Message" required></textarea>
           </div>
-          <button type="submit" class="btn" style="background-color: var(--blue); color:white;" id="submitButton">Submit</button>
+          <input type="submit" class="btn" style="background-color: var(--blue); color:white;" id="submitButton" value="Connect"/>
         </form>
-        <div id="loadingIndicator" style="display: none;">
-          <!-- Loading indicator, e.g., a spinner -->
-          Loading...
-      </div>
-  
       </div>
     </div>
   </section>
@@ -402,27 +379,6 @@
       <!-- Typewrite effect script -->
       <script src="js/typewrite.js"></script>
       <script src="js/main.js"></script>
-      <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-          const submitButton = document.getElementById('submitButton');
-          const loadingIndicator = document.getElementById('loadingIndicator');
-          
-          submitButton.disabled = true;
-          loadingIndicator.style.display = 'block';
-          
-          var email_resp=SendMail();
-          
-          submitButton.disabled = false;
-          loadingIndicator.style.display = 'none';
-          if (email_resp){
-            document.getElementById('email-response').innerHTML='Thank you for your message.'
-          }
-          else{
-            document.getElementById('email-response').innerHTML='Sorry!, Due to some technical problem, It is not possible to copy your message.'
-          }
-        });
-    </script>
-
+      <script src="js/email.js"></script>
 </body>
 </html>

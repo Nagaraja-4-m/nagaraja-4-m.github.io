@@ -2,9 +2,14 @@
 const SERVICE_ID="service_yp3g2eb";
 const TEMPLATE_ID="template_xzaxwlb";
 
-function SendMail(){
-    var flag=true
-    var params={
+const btn = document.getElementById('submitButton');
+
+
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+   btn.value = 'Connecting...';
+   var params={
         my_name: "Nagaraj",
         from_name: document.getElementById('from_name').value,
         from_email: document.getElementById('from_email').value,
@@ -13,18 +18,49 @@ function SendMail(){
         from_name: document.getElementById('from_name').value,
         reply_to:"nagaraj.nani.business@gmail.com",
     };
-
     emailjs.send(SERVICE_ID, TEMPLATE_ID,params).then(
         res => {
             console.log("success");
+            btn.value = 'Connect';
+            btn.setAttribute('disabled', true);
+            document.getElementById('email-response').innerHTML='Thank you for your message.'
         }
     ).catch(
         error => {
         console.log("failed");
+        btn.value = 'Connect';
+        document.getElementById('email-response').innerHTML='Unkown technical issue occured.'
         }
     )
-    return flag
 
 
-}
+});
 
+
+   
+//     return flag
+
+
+// }
+
+
+
+
+// document.getElementById('form')
+//  .addEventListener('submit', function(event) {
+//    event.preventDefault();
+
+//    btn.value = 'Sending...';
+
+//    const serviceID = 'default_service';
+//    const templateID = 'template_xzaxwlb';
+
+//    emailjs.sendForm(serviceID, templateID, this)
+//     .then(() => {
+//       btn.value = 'Send Email';
+//       alert('Sent!');
+//     }, (err) => {
+//       btn.value = 'Send Email';
+//       alert(JSON.stringify(err));
+//     });
+// });
