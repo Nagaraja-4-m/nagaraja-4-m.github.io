@@ -8,7 +8,7 @@ const btn = document.getElementById('submitButton');
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
-   btn.value = 'Connecting...';
+   btn.value = 'Sending...';
    var params={
         my_name: "Nagaraj",
         from_name: document.getElementById('from_name').value,
@@ -21,14 +21,14 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     emailjs.send(SERVICE_ID, TEMPLATE_ID,params).then(
         res => {
             console.log("success");
-            btn.value = 'Connect';
+            btn.value = 'Send';
             btn.setAttribute('disabled', true);
             document.getElementById('email-response').innerHTML='Thank you for your message.'
         }
     ).catch(
         error => {
         console.log("failed");
-        btn.value = 'Connect';
+        btn.value = 'Send';
         document.getElementById('email-response').innerHTML='Unkown technical issue occured.'
         }
     )
