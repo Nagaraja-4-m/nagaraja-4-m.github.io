@@ -89,6 +89,12 @@ i{
 section{
     margin-top:auto;
     margin-bottom:auto;
+    /* padding: 104px 0px; */
+  }
+.section-home{
+  margin-top: 148px;
+  margin-bottom: 194px;
+    /* padding-bottom: 204px; */
 }
 section h1{
     font-weight:400 ;

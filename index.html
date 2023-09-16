@@ -11,10 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font awesome kit -->
     <script src="https://kit.fontawesome.com/3cb6b13c2c.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
     <!-- Local CSSS  -->
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/experience.css" rel="stylesheet">
+    <link href="css/horizontal-timeline.css" rel="stylesheet">
     <!-- <link href="css/experience2.css" rel="stylesheet"> -->
     <!-- EMail JS -->
         <script type="text/javascript"
@@ -56,7 +59,7 @@
               <a class="nav-link" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#lang-tools">Languages & Tools</a>
+              <a class="nav-link" href="#lang-tools">Tech Stack</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#certificates">Certificates</a>
@@ -71,13 +74,13 @@
 
   <section class="container">
 
-  <section id="home"  class="mt-5 pt-3">
-    <div >
+  <section id="home"   class="mt-5 pt-3">
+    <div  class="section-home">
       <div class="row  equal-height-section mt-4">
         <!-- <div class="col-md-2"></div> -->
         <div class="col-md-6 text-center">
           <p>Hello, I'am</p>
-          <h1>MY NAME</h1>
+          <h1>NAGARAJ</h1>
           <p id="demo"></p>
           <p><a class="download-resume" href="https://drive.google.com/file/d/1Bxu4wjOlTw3lEwIaeSYqNLx6bnt0Q0Kv/view" target="_blank"><i class="fa-solid fa-download"></i> resume</a></p>
           <!-- <h2>Hello, I am a Developer</h2> -->
@@ -95,8 +98,8 @@
 
   
   
-  <section id="about" class="mt-4">
-    <div>
+  <section id="about" class="mt-5 pt-3">
+  <div>
       <h1>About Me</h1>
       <div class="row">
       <div class="col-md-12">
@@ -116,52 +119,45 @@
       </div>
     </div>
     
-    <!--  -->
-    <!-- <div id="app" class="container"> -->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="hr-swiper-container">          
-            <div class="hr-swiper-wrapper hr-timeline">
-              <div class="hr-swiper-slide">
-                <div class="hr-timestamp">
-                  <span class="hr-date">MCA(2022)<span>
-                </div>
-                <div class="hr-status">
-                  <span>BMS College of Engineering,<br/>Bengaluru</span>
-                </div>
-              </div>
-              <div class="hr-swiper-slide">
-                <div class="hr-timestamp">
-                  <span class="hr-date">B.Sc (CS)(2020)<span>
-                </div>
-                <div class="hr-status">
-                  <span>HPPC Government First Grade College,<br/>Challakere</span>
-                </div>
-              </div>
-              <div class="hr-swiper-slide">
-                <div class="hr-timestamp">
-                  <span class="hr-date">12<sup>th</sup>(2017)<span>
-                </div>
-                <div class="hr-status">
-                  <span>Government PU College,<br/>Challakere</span>
-                </div>
-              </div>
-              <div class="hr-swiper-slide">
-                <div class="hr-timestamp">
-                  <span class="hr-date">10<sup>th</sup>(2015)<span>
-                </div>
-                <div class="hr-status">
-                  <span>BM Government High School,<br/>Challakere </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- </div> -->
-    <!--  -->
-    </div>
-  </section>
+<!-- EDUCATION DETAILS  -->
+<div class="line_box" style="margin: 40px 0 40px 0;">
+  <div class="text_circle done">
+     <div class="circle">
+        <h4>MCA</h4>
+        <p>2021 - 2022</p>
+     </div>
+     <a href="" class="tvar">
+      <span data-toggle="popover" title="BMS College of Engineering, Bangalore" data-trigger="hover" data-placement="top" data-content="Ukázkový text při hover"></span>
+    </a>
+  </div>
+  <div class="text_circle">
+     <div class="circle">
+        <h4>B.Sc (Computer science)</h4>
+        <p>2017-2020</p>
+     </div>
+     <a href="" class="tvar">
+      <span data-toggle="popover" title="HPPC Government First Grade College, Challakere" data-trigger="hover" data-placement="top" data-content="Ukázkový text při hover"></span>
+    </a>
+  </div>
+  <div class="text_circle">
+     <div class="circle">
+        <h4>PUC</h4>
+        <p>2015-2017</p>
+     </div>
+     <a href="" class="tvar">
+      <span data-toggle="popover" title="Government PU College, Challakere" data-trigger="hover" data-placement="top" data-content="Ukázkový text při hover"></span></a>
+  </div>
+  <div class="text_circle">
+     <div class="circle">
+        <h4>SSLC</h4>
+        <p>2015</p>
+     </div>
+     <a href="" class="tvar"><span data-toggle="popover" title="BM Government High School, Challakere" data-trigger="hover" data-placement="top" data-content="Ukázkový text při hover"></span></a>
+  </div>
+</div>
+
+</div>
+</section>
 
   
   <section id="experience">
@@ -280,7 +276,7 @@
 
   <section id="lang-tools">
     <div>
-      <h1>Languages & Tools</h1>
+      <h1>Tools & Technologies</h1>
       <section class="mt-5 pt-3 lang-tools">
         <div class="row">
           <div class="col">
@@ -380,5 +376,11 @@
       <script src="js/typewrite.js"></script>
       <script src="js/main.js"></script>
       <script src="js/email.js"></script>
+
+      <script>
+        $(function () {
+          $('[data-toggle="popover"]').popover();
+        });
+      </script>
 </body>
 </html>

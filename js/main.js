@@ -21,8 +21,6 @@ get_experience();
 
 
 
-
-
 // 
 // const data = [
 //     { dateLabel: 'January 2017', title: 'Gathering Information' },
