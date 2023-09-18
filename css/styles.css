@@ -26,17 +26,6 @@
   }
 
 
-  #lang-tools img:hover{
-    opacity:0.5;
-    cursor: pointer;
-  
-  }
-/*   
-  #lang-tools img::{
-    opacity:0.5;
-    cursor: pointer;  
-  } */
-
 
   .contact-form{
     display: flex;
@@ -108,8 +97,8 @@
   }
 
   #email-response{
-    font-weight:bolder;
-    color:var(--blue);
+    font-weight:bold;
+    /* color:var(--blue); */
 
   }
 /* 
@@ -131,3 +120,5 @@
 /* *, ::after, ::before{
   
 } */
+
+

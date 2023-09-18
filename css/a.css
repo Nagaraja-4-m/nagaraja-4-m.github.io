@@ -1,0 +1,12 @@
+.vl-timeline{
+    position: relative;
+    max-width: 1200px;
+    margin:100px auto;
+}
+
+.vl-timeline .container{
+    position: relative;
+    padding: 20px 50px;
+    width: 50%;
+    background-color: yellow;
+}

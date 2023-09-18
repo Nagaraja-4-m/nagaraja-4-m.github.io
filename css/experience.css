@@ -188,7 +188,7 @@
 }
 .main-timeline .title a{
     text-decoration: none;
-    color: black;
+    color: var(--ancor-color)
 }
 .main-timeline .title a:hover{
     /* text-decoration: none; */
@@ -298,9 +298,19 @@
 }
 .sub-title a{
     text-decoration: none;
-    color: black;
+    /* color: black; */
+    color:var(--ancor-color)
 }
 .sub-title a:hover{
     text-decoration: none;
     color: var(--blue);
+}
+
+.timeline-content{
+    box-shadow: var(--box-shadow);
+    
+}
+.timeline-content:hover{
+    /* box-shadow: none; */
+    
 }

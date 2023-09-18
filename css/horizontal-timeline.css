@@ -20,7 +20,7 @@
 }
 .stav_projektu .text_circle:after,.stav_projektu .text_circle:before {background-color: var(--blue);;}
 .line_box h4 {
-  color:var(--blue);
+  /* color:var(--blue); */
   font-weight: bold;
 }
 .line_box h4,.line_box p {
@@ -40,7 +40,7 @@
   width: 15px;
   bottom: 14px;
   right: 15px;
-  background-color: var(--blue);;
+  /* background-color: var(--blue);; */
   border-radius: 50%;
   top: -25px;
 }
