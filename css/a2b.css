@@ -140,6 +140,7 @@
     margin: 50px auto;
     margin-left: 20px;
 }
+
 .vl-timeline::after{
     left: -20px;
 }
@@ -160,6 +161,12 @@
  
 .vl-timeline .right-container{
     left: 0;
+    margin-bottom:40px;
+
+}
+.vl-timeline .left-container{
+    margin-bottom:40px;
+
 }
 .vl-timeline .right-container img, .vl-timeline .left-container img{
     left: 10px;

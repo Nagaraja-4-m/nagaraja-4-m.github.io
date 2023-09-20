@@ -64,6 +64,25 @@
   }
   
   
+@media screen and (max-width:768px){
+  .icon-bar {
+    text-align: center; 
+    justify-content: center;
+    right:25%;
+    top: auto;
+    left:25%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    /* position: absolute;  */
+  }
+
+  .icon-bar a {
+    display:table-cell; 
+    margin: 50% 10px; 
+  }
+}
+
   .content {
     margin-left: 75px;
     font-size: 30px;
