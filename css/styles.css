@@ -81,6 +81,9 @@
     display:table-cell; 
     margin: 50% 10px; 
   }
+  .icon-bar{
+    display: none;
+  }
 }
 
   .content {
