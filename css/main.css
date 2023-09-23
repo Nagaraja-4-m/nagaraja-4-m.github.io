@@ -216,10 +216,12 @@ b{
 
 .footer{
   background-color: var(--blue_transparent);
+  background-color: var(--blue);
   text-decoration: none;
   font-size:small;
   padding-top:6px;
-  margin-bottom: -14px;
+  /* margin-bottom: -16px; */
+  padding: 10px 0px;
   color: black;
   color:white;
 }
@@ -228,6 +230,7 @@ b{
 display: flex;
 justify-content: center;
 font-weight: bolder;
+padding: inherit;
 }
 
 .footer p a{
@@ -288,6 +291,7 @@ color: inherit;
   }
   .footer-icon-bar{
     display:flow-root;
+    padding: inherit;
   }
   
 }
