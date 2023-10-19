@@ -131,6 +131,9 @@ b{
   font-size: large;
 }
 
+/* #home{ */
+  /* margin-bottom:212px; */
+/* } */
 
 /* ABOUT */
 .about-me{
@@ -188,6 +191,7 @@ b{
 
 #lang-tools img{
   box-shadow: var(--box-shadow);
+  margin-bottom:18px;
 }
 #lang-tools img:hover{
   cursor: pointer;
@@ -295,6 +299,10 @@ color: inherit;
 
   .table{
     font-size: medium;
+  }
+  .lang-tools img{
+    width: 100px;
+    height: 100px;
   }
   
   #contact form{
