@@ -122,6 +122,10 @@ b{
 }
 
 
+.programmer-img img{
+  margin-top: -52px;
+}
+
 
 
 
@@ -290,6 +294,10 @@ color: inherit;
   /* body{
     font-size: small;
   } */
+  
+.programmer-img img{
+  margin-top: 0px;
+}
   #about .contact-info p{
     line-height: 140%;
   }
