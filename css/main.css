@@ -7,6 +7,7 @@
     --ancor-color:#032b53;
     --box-shadow:20px 20px 20px rgba(0, 0, 0, 0.2); 
     --box-shadow:none;
+    --box-shadow-light:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   }
 
@@ -194,18 +195,22 @@ b{
 /*  LANGUAGES & TOOLS */
 
 #lang-tools img{
-  box-shadow: var(--box-shadow);
   margin-bottom:18px;
+  padding: 10px;
+  box-shadow: var(--box-shadow-light);
+  transition:2000ms;
+  border-radius: 14px;
 }
 #lang-tools img:hover{
   cursor: pointer;
-  box-shadow: none;
+  box-shadow:none;
+  transition:1000ms;
 }
 
 
 /* CONTACT FORM  */
 #contact form{
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: var(--box-shadow-light);
   border-radius: 8px;
   padding:20px;
 }
